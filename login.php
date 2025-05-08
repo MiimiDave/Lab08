@@ -1,4 +1,13 @@
-<?php include 'header.inc'; ?>
+<?php
+session_start();
+
+// 1. Generate a CSRF token if we don’t already have one
+if (empty($_SESSION['token'])) {
+    $_SESSION['token'] = bin2hex(random_bytes(32));
+}
+
+include 'header.inc';
+?>
 
 <h1>Login</h1>
 
@@ -13,8 +22,8 @@
   <label for="password">Password:</label>
   <input type="password" id="password" name="password" required>
 
-
-  <input type="hidden" name="token" value="J12345678">
+  <!-- 2. Use the session’s token here! -->
+  <input type="hidden" name="token" value="<?= htmlspecialchars($_SESSION['token']) ?>">
 
   <button type="submit">Login</button>
 </form>

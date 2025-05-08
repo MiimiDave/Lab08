@@ -8,4 +8,5 @@ if (empty($_SESSION['user'])) {
 }
 ?>
 <h1>Welcome, <?= htmlspecialchars($_SESSION['user']) ?>!</h1>
+<p>Your Token: D105213476</p>
 <?php include 'footer.inc'; ?>

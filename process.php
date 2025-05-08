@@ -7,7 +7,7 @@ $password = $_POST['password'] ?? '';
 $token    = $_POST['token']    ?? '';  
 
 
-if ($username === 'YourName' && $password === 'YourStudentID') {
+if ($username === 'Davina' && $password === '105213476') {
     $_SESSION['user'] = $username;      
     header('Location: welcome.php');
     exit;

@@ -1,5 +1,5 @@
   <footer>
-    <p>&copy; <?= date('Y') ?> Your Name – Student Lab</p>
+    <p>&copy; <?= date('Y') ?> Davina – COS10026 Web Technology Project</p>
   </footer>
 </body>
 </html>
